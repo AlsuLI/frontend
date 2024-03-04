@@ -8,7 +8,10 @@ const AppWrapper = (Component, idName, classNames) =>
         <SocialMedia />
 
         <div className="app__wrapper app__flex">
-          <Component/>
+          <Component />
+          <div className="copyright">
+            <p className="p-text">@2023 ALSU</p>
+          </div>
         </div>
       </div>
     );

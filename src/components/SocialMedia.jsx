@@ -1,10 +1,30 @@
 import React from 'react'
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import {
+  BsTwitter,
+  BsInstagram,
+  BsTelegram,
+  BsLinkedin,
+  BsWhatsapp,
+  BsMailbox,
+} from "react-icons/bs";
 
 const SocialMedia = () => {
   return (
-    <div className='app__social'><div><BsInstagram/></div></div>
-  )
+    <div className="app__social">
+      <div>
+        <BsTelegram />
+      </div>
+      <div>
+        <BsWhatsapp />
+      </div>
+      <div>
+        <BsLinkedin />
+      </div>
+      <div>
+        <BsInstagram />
+      </div>
+    </div>
+  );
 }
 
 export default SocialMedia

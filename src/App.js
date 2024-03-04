@@ -2,9 +2,7 @@ import React from "react";
 import "./global.scss";
 
 
-import { Header } from "./container";
-import { About } from "./container/About/About";
-import { Work } from "./container/Work/Work";
+import { Header, About, Work } from "./container";
 import { Skills } from "./container/Skills/Skills";
 import { Testimonial } from "./container/Testimonial/Testimonial";
 import { Footer } from "./container/Footer/Footer";
