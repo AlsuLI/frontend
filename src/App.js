@@ -2,10 +2,8 @@ import React from "react";
 import "./global.scss";
 
 
-import { Header, About, Work } from "./container";
-import { Skills } from "./container/Skills/Skills";
+import { Header, About, Work, Skills, Footer } from "./container";
 import { Testimonial } from "./container/Testimonial/Testimonial";
-import { Footer } from "./container/Footer/Footer";
 import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
@@ -16,7 +14,7 @@ function App() {
       <About />
       <Work />
       <Skills />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Footer />
     </div>
   );

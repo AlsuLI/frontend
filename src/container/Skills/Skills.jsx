@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { AppWrapper } from "../../wrapper";
+import { AppWrapper, MotionWrapper } from "../../wrapper";
 import { Tooltip } from "react-tooltip";
 import { urlFor, client } from "../../client";
 import "./Skills.scss";
 
-export const Skills = () => {
+const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [experiences, setExperiences] = useState([]);
 
@@ -44,43 +44,43 @@ export const Skills = () => {
               <p className="p-text">{skill.name}</p>
             </motion.div>
           ))}
+        </motion.div>
 
-          <motion.div className="app__skills-exp">
-            {experiences?.map((experience) => (
-              <motion.div
-                className="app__skills-exp-item"
-                key={experience.year}
-              >
-                <div className="app__scills-exp-year">
-                  <p className="bold-text">{experience.year}</p>
-                </div>
-                <motion.div className="app__skills-exp-works">
-                  {experience?.works.map((work) => (
-                    <>
-                      <motion.div
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ duration: 0.5 }}
-                        className="app__skills-exp-work"
-                        data-tooltip-content={work.desc}
-                        data-tooltip-id={work.name}
-                        key={work.name}
-                        data-tooltip-place="top"
-                      >
-                        <h4 className="bold-text">{work.name}</h4>
-                        <p className="p-text">{work.company}</p>
-                      </motion.div>
-                      <Tooltip
-                        id={work.name}
-                        className="skills-tooltip"
-                      />
-                    </>
-                  ))}
-                </motion.div>
+        <motion.div className="app__skills-exp">
+          {experiences?.map((experience) => (
+            <motion.div className="app__skills-exp-item" key={experience.year}>
+              <div className="app__scills-exp-year">
+                <p className="bold-text">{experience.year}</p>
+              </div>
+              <motion.div className="app__skills-exp-works">
+                {experience?.works.map((work) => (
+                  <>
+                    <motion.div
+                      whileInView={{ opacity: [0, 1] }}
+                      transition={{ duration: 0.5 }}
+                      className="app__skills-exp-work"
+                      data-tooltip-content={work.desc}
+                      data-tooltip-id={work.name}
+                      key={work.name}
+                      data-tooltip-place="top"
+                    >
+                      <h4 className="bold-text">{work.name}</h4>
+                      <p className="p-text">{work.company}</p>
+                    </motion.div>
+                    <Tooltip id={work.name} className="skills-tooltip" />
+                  </>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </>
   );
 };
+
+export default AppWrapper(
+  MotionWrapper(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
+);

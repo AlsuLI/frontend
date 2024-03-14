@@ -70,10 +70,14 @@
       border-radius: 0.75rem;
     }
 
-    @media screen and (min-width: 350px) {
+    @media screen and (max-width: 550px) {
       width: 100%;
       margin: 1rem;
     }
+  }
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
   }
 }
 

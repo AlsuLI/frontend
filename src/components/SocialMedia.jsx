@@ -20,9 +20,6 @@ const SocialMedia = () => {
       <div>
         <BsLinkedin />
       </div>
-      <div>
-        <BsInstagram />
-      </div>
     </div>
   );
 }
