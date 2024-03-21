@@ -1,22 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap");
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  /* --font-base: "DM Sans", sans-serif; */
+  /* --font-base: "Exo 2", sans-serif; */
+
+  --font-base: "Wix Madefor Display", sans-serif;
 
   --primary-color: #f5e7c6;
-  --secondary-color: #ff6d1f;
-  --black-color: #222222;
+  --secondary-color: #2E5077;
+  --black-color: #611C35;
   --lightGray-color: #e4e4e4;
-  --gray-color: #806D61;
+  --gray-color: #806d61;
   --brown-color: #46364a;
-  --white-color: #fffcf2;
-
-
+  --white-color: #fff;
 
   --linen-color: #faf3e1;
   --cotton-color: #f5e7c6;
   --orange-color: #ff6d1f;
-  --black-color: #222222;
+
 }
 
 * {
@@ -24,4 +26,9 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-snap-type: y mandatory;
 }

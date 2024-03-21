@@ -4,6 +4,7 @@ import mobile from "../../assets/mobile.png";
 import { AppWrapper, MotionWrapper } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
+import BackgroundChanger from "../../components/BackgroundChanger";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -42,67 +43,68 @@ const Footer = () => {
   
   return (
     <>
-      <h2 className="head__text">Text me</h2>
-      <div className="app__footer-cards">
-        <div className="app__footer-card">
-          <img src={email1} alt="email" />
-          <a href="mailto:allssy198@gmail.com" className="p-text">
-            allssy198@gmail.com
-          </a>
-        </div>
-        <div className="app__footer-card">
-          <img src={mobile} alt="mobile" />
-          <a href="tel: +7 (937) 280-89-81" className="p-text">
-            +7 (937) 280-89-81
-          </a>
-        </div>
-      </div>
-      {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="text"
-              name="name"
-              placeholder="Your name"
-              value={name}
-              onChange={handleChangeInput}
-            />
+   {/* <BackgroundChanger>Hi!</BackgroundChanger> */}
+        <h2 className="head__text">Text me</h2>
+        <div className="app__footer-cards">
+          <div className="app__footer-card">
+            <img src={email1} alt="email" />
+            <a href="mailto:allssy198@gmail.com" className="p-text">
+              allssy198@gmail.com
+            </a>
           </div>
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="email"
-              name="email"
-              placeholder="Your email"
-              value={email}
-              onChange={handleChangeInput}
-            />
+          <div className="app__footer-card">
+            <img src={mobile} alt="mobile" />
+            <a href="tel: +7 (937) 280-89-81" className="p-text">
+              +7 (937) 280-89-81
+            </a>
           </div>
+        </div>
+        {!isFormSubmitted ? (
+          <div className="app__footer-form app__flex">
+            <div className="app__flex">
+              <input
+                className="p-text"
+                type="text"
+                name="name"
+                placeholder="Your name"
+                value={name}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div className="app__flex">
+              <input
+                className="p-text"
+                type="email"
+                name="email"
+                placeholder="Your email"
+                value={email}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div>
+              <textarea
+                className="p-text"
+                placeholder="Your message"
+                value={message}
+                name="message"
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button type="button" className="p-text" onClick={handleSubmit}>
+              {loading ? "Sending" : "Send Message"}
+            </button>
+          </div>
+        ) : (
           <div>
-            <textarea
-              className="p-text"
-              placeholder="Your message"
-              value={message}
-              name='message'
-              onChange={handleChangeInput}
-            />
+            <h3 className="head-text">Thank you!</h3>
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
-            {loading ? "Sending" : "Send Message"}
-          </button>
-        </div>
-      ) : (
-        <div>
-          <h3 className="head-text">Thank you!</h3>
-        </div>
-      )}
+        )}
     </>
   );
 };
 
 export default AppWrapper(
   MotionWrapper(Footer, "app__footer"),
-  "contact",
+  "контакты",
   "app__primarybg"
 );

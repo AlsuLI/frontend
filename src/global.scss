@@ -55,7 +55,7 @@
 
 .head-text {
   font-size: 2.75rem;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
   color: var(--black-color);
   text-transform: capitalize;
@@ -86,7 +86,7 @@
 
 .bold-text {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--black-color);
   text-align: left;
 
@@ -111,7 +111,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--white-color);
+    background-color: transparent;
     margin: 0.25rem 0;
     border: 1px solid var(--lightGray-color);
 
@@ -188,3 +188,13 @@
     padding: 2rem;
   }
 }
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+// .exo-2-<uniquifier> {
+//   font-family: "Exo 2", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }

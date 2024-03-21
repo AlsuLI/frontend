@@ -1,0 +1,19 @@
+.float__wrapper {
+  border-radius: 24px;
+  background-color: var( --secondary-color);
+}
+
+.float {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+  border: 2px solid #806D61;
+  padding: 3px;
+  background-color: var( --linen-color);
+}
+
+.screen {
+  border-radius: 20px;
+  padding: 20px;
+}

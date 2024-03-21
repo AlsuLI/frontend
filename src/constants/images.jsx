@@ -34,6 +34,12 @@ import bolt from "../assets/bolt.png";
 import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
+import alsu from "../assets/Alsu.png";
+import alsu_orange from "../assets/alsu-orange.JPG"
+import frontend from "../assets/frontend.webp";
+import webD from "../assets/web-design.webp";
+import js from "../assets/js.webp";
+
 
 export default {
   mobile,
@@ -68,4 +74,9 @@ export default {
   nb,
   skype,
   spotify,
+  alsu,
+  alsu_orange,
+  frontend, 
+  webD,
+  js,
 };
