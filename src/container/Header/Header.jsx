@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import { AppWrapper } from "../../wrapper";
 import { FloatingWindow } from "../../components";
 import ParallaxText from "../../components/ParallaxText/ParallaxText";
+import { Canvas } from "@react-three/fiber";
+import Box from "../../components/Box";
+import { OrbitControls } from "@react-three/drei";
+import CloudsFloat from "../../components/CloudsFloat";
 
 const scaleVariants = {
   whileInView: {
@@ -36,7 +40,7 @@ const Header = () => (
           height: "100%",
         }}
       >
-        <motion.div
+        {/* <motion.div
           initial={{ x: "120%" }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", duration: 20, repeat: Infinity }}
@@ -47,8 +51,8 @@ const Header = () => (
           className="app__header__moving-text"
         >
           REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS
-        </motion.div>
-
+        </motion.div> */}
+        {/* 
         <motion.div
           initial={{ x: "-100%" }}
           animate={{ x: "100vw" }}
@@ -60,9 +64,8 @@ const Header = () => (
           className="app__header__moving-text"
         >
           REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS
-        </motion.div>
-
-        <motion.div
+        </motion.div> */}
+        {/* <motion.div
           initial={{ x: "100%" }}
           animate={{ x: "-140%" }}
           transition={{ ease: "linear", duration: 20, repeat: Infinity }}
@@ -73,9 +76,29 @@ const Header = () => (
           className="app__header__moving-text"
         >
           REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS
-        </motion.div>
+        </motion.div> */}
+        {/* <Canvas>
+          <ambientLight intensity={Math.PI / 2} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            decay={0}
+            intensity={Math.PI}
+          />
+          <pointLight
+            position={[-10, -10, -10]}
+            decay={0}
+            intensity={Math.PI}
+          />
+          <Box position={[-1.2, 0, 0]} />
+          <Box position={[1.2, 0, 0]} />
+          <Box position={[3.5, 0, 0]} />
+          <OrbitControls />
+        </Canvas> */}
 
-        <motion.div
+        <CloudsFloat/>
+        {/* <motion.div
           initial={{ x: "-100%" }}
           animate={{ x: "140vw" }}
           transition={{ ease: "linear", duration: 20, repeat: Infinity }}
@@ -86,7 +109,7 @@ const Header = () => (
           className="app__header__moving-text"
         >
           REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS REACT JAVASCRIPT SCSS
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
 

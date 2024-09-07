@@ -2,7 +2,7 @@
   position: relative;
   // background-image: url(../../assets/bg-robot.jpg);
   backdrop-filter: blur(10px);
-  background-color: #2e5077;
+  background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -47,7 +47,7 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-    background-color: #fff;
+    background-color: #fbe7e8;;
     padding: 3rem 2rem;
     height: 100%;
     // border-radius: 20px;
@@ -106,7 +106,6 @@
     align-items: center;
     height: 60vh;
     width: 100%;
-    padding: 2rem;
 
     // div {
     //   width: 100px;

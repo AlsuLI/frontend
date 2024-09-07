@@ -6,7 +6,7 @@ import { AppWrapper, MotionWrapper } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 const Work = () => {
-  const [activeFilter, setactiveFilter] = useState("All");
+  const [activeFilter, setactiveFilter] = useState("Все");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
@@ -27,15 +27,17 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === 'All') {
+      if (item === 'Все') {
         setFilterWork(works);
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)))
+        console.log(works);
        }
     }, 500);
 
    
   };
+  
 
   return (
     <>
@@ -44,7 +46,7 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "React JS", "All"].map((item, index) => (
+        {["1C", "React, JS", "Все"].map((item, index) => (
           <div
             key={index}
             onClick={() => handelWorkFilter(item)}

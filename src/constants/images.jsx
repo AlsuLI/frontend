@@ -37,9 +37,11 @@ import spotify from "../assets/spotify.png";
 import alsu from "../assets/Alsu.png";
 import alsu_orange from "../assets/alsu-orange.JPG"
 import frontend from "../assets/frontend.webp";
-import webD from "../assets/web-design.webp";
-import js from "../assets/js.webp";
-
+import cons from "../assets/cons.png";
+import accountant from "../assets/accountant.png";
+import cat from '../assets/cat.gif'
+import telegram from "../assets/telegram.svg";
+import wa from "../assets/wa.svg";
 
 export default {
   mobile,
@@ -76,7 +78,10 @@ export default {
   spotify,
   alsu,
   alsu_orange,
-  frontend, 
-  webD,
-  js,
+  frontend,
+  cons,
+  accountant,
+  cat,
+  telegram,
+  wa
 };

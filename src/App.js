@@ -1,11 +1,10 @@
 import React from "react";
 import "./global.scss";
 
-
 import { Header, About, Work, Skills, Footer } from "./container";
-import { Testimonial } from "./container/Testimonial/Testimonial";
 import { Navbar } from "./components/Navbar/Navbar";
 import { BackgroundChanger } from "./components";
+import BoxScroll from "./components/BoxScroll/BoxScroll";
 
 function App() {
   return (
@@ -13,12 +12,12 @@ function App() {
       <Navbar />
       <Header />
       <About />
+      {/* <BoxScroll /> */}
       <Work />
       <Skills />
-      {/* <Testimonial /> */}
       <Footer />
     </div>
   );
-};
+}
 
 export default App;

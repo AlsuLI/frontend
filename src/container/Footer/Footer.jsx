@@ -5,6 +5,7 @@ import { AppWrapper, MotionWrapper } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
 import BackgroundChanger from "../../components/BackgroundChanger";
+import images from "../../constants/images";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -23,28 +24,28 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    setLoading(true);
-  
-    const contact = {
-      _type: 'contact',
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
+  // const handleSubmit = () => {
+  //   setLoading(true);
 
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
-  };
-  
+  //   const contact = {
+  //     _type: 'contact',
+  //     name: formData.username,
+  //     email: formData.email,
+  //     message: formData.message,
+  //   };
+
+  //   client.create(contact)
+  //     .then(() => {
+  //       setLoading(false);
+  //       setIsFormSubmitted(true);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+
   return (
     <>
-   {/* <BackgroundChanger>Hi!</BackgroundChanger> */}
-        <h2 className="head__text">Text me</h2>
+      <h2 className="head__text">Контакты</h2>
+      <div className="app__footer-wrapper">
         <div className="app__footer-cards">
           <div className="app__footer-card">
             <img src={email1} alt="email" />
@@ -58,8 +59,25 @@ const Footer = () => {
               +7 (937) 280-89-81
             </a>
           </div>
+          <div className="app__footer-card">
+            <img src={images.telegram} alt="telegram" />
+            <a href="https://t.me/AlsuLParadox" className="p-text">
+              Telegram
+            </a>
+          </div>
+          <div className="app__footer-card">
+            <img src={images.wa} alt="wa" />
+            <a href="https://wa.me/+79372808981" className="p-text">
+              WhatsApp
+            </a>
+          </div>
         </div>
-        {!isFormSubmitted ? (
+        <div className="app__footer-cat">
+          <img src={images.cat} alt="cat" />
+        </div>
+      </div>
+
+      {/* {!isFormSubmitted ? (
           <div className="app__footer-form app__flex">
             <div className="app__flex">
               <input
@@ -98,7 +116,7 @@ const Footer = () => {
           <div>
             <h3 className="head-text">Thank you!</h3>
           </div>
-        )}
+        )} */}
     </>
   );
 };
